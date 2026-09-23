@@ -1,0 +1,18 @@
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Test results
+TestResults/
+coverage/
+
+# Local environment / secrets
+.env
+*.local.json
+
+# OS
+.DS_Store
+Thumbs.db
