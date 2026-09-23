@@ -34,7 +34,6 @@ I created this project to practice building a small backend application with a p
 
 The project is divided into a few simple layers:
 
-```text
 Console UI
     ↓
 Student Service
@@ -42,37 +41,12 @@ Student Service
 Student Repository
     ↓
 MySQL
-```
 
-### Console UI
-
-Handles the menu, user input, and displaying results.
-
-### Student Service
-
-Contains the main business logic and validation.
-
-### Repository
-
-Handles SQL queries and communication with MySQL.
-
-### MySQL
-
-Stores the student records.
-
-## Database
-
-The application uses a MySQL database named:
-
-```text
-student_management
-```
 
 The main table is:
 
-```text
 students
-```
+
 
 The table contains information such as:
 
@@ -87,9 +61,8 @@ The table contains information such as:
 
 The SQL setup is available in:
 
-```text
 database/schema.sql
-```
+
 
 ## Requirements
 
@@ -101,34 +74,34 @@ You need the following installed:
 
 Check your .NET version with:
 
-```powershell
+powershell:
+
 dotnet --version
-```
+
 
 ## Setup
 
 ### 1. Clone the repository
 
-```bash
+bash:
 git clone https://github.com/SuryanshTripathi01/StudentManagementSystem.git
 cd StudentManagementSystem
-```
+
 
 ### 2. Create the database
 
 Create the database in MySQL:
 
-```sql
+sql:
 CREATE DATABASE student_management
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
-```
+
 
 You can also run the SQL file:
 
-```text
 database/schema.sql
-```
+
 
 using MySQL Workbench.
 
@@ -138,13 +111,13 @@ The application uses environment variables for the MySQL connection.
 
 On Windows PowerShell:
 
-```powershell
+powershell:
 $env:SMS_DB_SERVER="127.0.0.1"
 $env:SMS_DB_PORT="3306"
 $env:SMS_DB_NAME="student_management"
 $env:SMS_DB_USER="root"
 $env:SMS_DB_PASSWORD="your_password"
-```
+
 
 Replace `your_password` with your own MySQL password.
 
@@ -246,40 +219,6 @@ This gives the application an additional layer of protection.
 
 Database calls use asynchronous methods because database access is an I/O operation.
 
-## Project Structure
-
-```text
-StudentManagementSystem/
-│
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-│
-├── database/
-│   └── schema.sql
-│
-├── src/
-│   └── StudentManagementSystem/
-│       ├── Configuration/
-│       ├── Data/
-│       ├── Models/
-│       ├── Services/
-│       ├── UI/
-│       ├── Program.cs
-│       └── StudentManagementSystem.csproj
-│
-├── tests/
-│   └── StudentManagementSystem.Tests/
-│       ├── StudentServiceTests.cs
-│       └── StudentManagementSystem.Tests.csproj
-│
-├── .env.example
-├── .gitignore
-├── LICENSE
-├── README.md
-├── RUNBOOK.md
-└── StudentManagementSystem.sln
-```
 
 ## Testing Done
 
@@ -296,32 +235,6 @@ While developing the project, I tested:
 - Deleting students
 - Data persistence in MySQL
 
-The project was also pushed to GitHub with GitHub Actions configured for continuous integration.
-
-## Publish the Application
-
-To create a release build for Windows:
-
-```bash
-dotnet publish src/StudentManagementSystem -c Release -r win-x64 --self-contained false -o publish
-```
-
-The published files will be placed in the `publish` folder.
-
-The MySQL environment variables still need to be configured on the machine where the application is run.
-
-## Git Workflow
-
-For future changes, I use the normal Git workflow:
-
-```bash
-git status
-git add .
-git commit -m "Describe the change"
-git push
-```
-
-GitHub Actions then checks the project automatically.
 
 ## What I Learned
 
