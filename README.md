@@ -1,4 +1,5 @@
-=Student Management System=
+𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐒𝐲𝐬𝐭𝐞𝐦
+
 A simple console-based Student Management System built with C#, .NET 10, and MySQL.
 I created this project to practice building a small backend application with a proper structure instead of putting everything in one file. It includes student CRUD operations, validation, MySQL database access, unit tests, and GitHub Actions.
 
